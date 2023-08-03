@@ -1,0 +1,47 @@
+
+#projects-box {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4% 6.1% 0%;
+    height: 100%;
+    overflow-y: auto;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+#projects-box::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+.blur {
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+}
+.container {
+    max-height: 100%;
+}
+
+.card { 
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    border-style: solid;
+    border-color: white;
+    border-width: 3px;
+}
+
+.card-header {
+    font-weight: 700;
+    text-align: center;
+}
+
+/*
+.card-img-top {
+    border-bottom: 3px solid white;
+}*/
+
+.card-title {
+    color: white;
+    text-align: center;
+}

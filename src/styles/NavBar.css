@@ -1,0 +1,10 @@
+.btn-primary {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    --bs-btn-border-color: black;
+    --bs-btn-hover-border-color: white;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin: 0% 0.1% 0% 0%;
+}
