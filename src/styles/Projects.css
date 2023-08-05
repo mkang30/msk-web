@@ -29,7 +29,11 @@
     border-style: solid;
     border-color: white;
     border-width: 3px;
+    transition: transform .2s;
 }
+.card:hover {
+    transform: scale(1.1);
+  }
 
 .card-header {
     font-weight: 700;

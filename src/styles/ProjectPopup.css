@@ -34,7 +34,7 @@
 .project-content-box {
     grid-column: 1/2;
     grid-row: 2/3;
-    padding: 5% 10%;
+    padding: 5% 11.5%;
     display: grid;
 }
 
@@ -43,4 +43,13 @@
     border-style: solid;
     border-color: white;
     border-radius: 10px;
+}
+
+.carousel-indicators {
+    align-items: center;
+    padding-top: 10%;
+    margin-bottom: 0;
+}
+.carousel-control-prev, .carousel-control-next {
+    width: 10%
 }
