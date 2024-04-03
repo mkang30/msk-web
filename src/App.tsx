@@ -1,5 +1,6 @@
 import "./styles/App.css"
-import React from "react"
+import './styles/index.css'
+import React, { useEffect, useState } from "react"
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Page from "./components/Page";
 import * as constants from './Constants'
@@ -14,19 +15,26 @@ export type PageProps = {
 export enum PageContent {
   HOME,
   PROJECTS,
-  EXPERIENCE
+  COOKIE
 }
 
 export function App() {
   // The data state is an array of strings, which is passed to our components
   // You may want to make this a more complex object, but for now it's just a string
+  const [dimensions, setDimensions] = useState({height: window.innerHeight,width: window.innerWidth})
+  useEffect(() => {
+    function handleResize() {
+      setDimensions({height: window.innerHeight, width: window.innerWidth})
+    }
+    window.addEventListener('resize', handleResize)
+  },[])
   return (
-    <div> 
+    <div id="app" style={{height:dimensions.height}}> 
       <Router>
         <Routes>
           <Route path='/' element={ <Page title="Hi I'm Min" subtitle='About me' pageContent={PageContent.HOME} themeColor={constants.SKY_BLUE}/> } />
           <Route path='/projects' element={ <Page title="Projects" subtitle='Software' pageContent={PageContent.PROJECTS} themeColor={constants.BLUE}/> }/>
-          <Route path='/experience' element={ <Page title="Experience" subtitle='Technical' pageContent={PageContent.EXPERIENCE} themeColor={constants.LIGHT_PURPLE}/> }/>
+          <Route path='/cookie' element={ <Page title="Cookie" subtitle='Technical' pageContent={PageContent.COOKIE} themeColor={constants.LIGHT_PURPLE}/> }/>
         </Routes> 
       </Router>
     </div>

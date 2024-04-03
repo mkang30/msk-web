@@ -1,18 +1,27 @@
-body{
+html {
+    font-size: 100%;
+}
+#app {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh
+    overflow-y: auto;
+    min-height: 600px;
 }
 
+canvas {
+    min-height: 600px;
+}
 
 #page-container {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 15% 85%;
     width: 60vw;
-    height: 70vh;
-    background-color: rgb(49,49,49);
+    height: 600px;
+    min-height: 600px;
+    min-width: 600px;
+    background-color: rgb(46,46,46);
     border-radius: 15px;
 }
 
@@ -24,9 +33,21 @@ body{
 .main-box {
     grid-column: 1/5;
     grid-row: 2/3;
-    max-height: 100vh;
-    background-color: rgb(49,49,49);
+    height: 100%;
+    background-color: rgb(46,46,46);
     border-radius: 0px 0px 15px 15px;
+}
+
+@media screen and (max-width: 600px) {
+    #page-container {
+        grid-template-rows: 10% 90%;
+        width: 95vw;
+        height: 98%;
+        min-height: 580px;
+        min-width: 320px;
+    }.main-box {
+        overflow-y: auto;
+    }
 }
 
 

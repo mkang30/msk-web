@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from "react-router-dom";
-import "../styles/index.css"
 import * as constants from '../Constants'
 import { PageContent } from '../App';
+import Resume from '../resume.pdf';
 import "../styles/NavBar.css"
 
 
@@ -22,7 +22,7 @@ function selectStyles(pc: PageContent){
             styles[1] = selectedStyle
             styles[2].borderTopLeftRadius = 15
             break
-        case PageContent.EXPERIENCE:
+        case PageContent.COOKIE:
             styles[1].borderTopRightRadius = 15
             styles[2] = selectedStyle
             styles[3].borderTopLeftRadius = 15
@@ -34,17 +34,27 @@ function selectStyles(pc: PageContent){
 }
 
 export default function NavBar(props: {pageContent: PageContent}){
+    const [dimensions, setDimensions] = useState({height: window.innerHeight,width: window.innerWidth})
+    useEffect(() => {
+        function handleResize() {
+          setDimensions({height: window.innerHeight, width: window.innerWidth})
+        }
+        window.addEventListener('resize', handleResize)
+      },[])
     const navigate = useNavigate();
     const styles = selectStyles(props.pageContent)
     function handleClick(path: string) {
         navigate(path);
-      }
+    }
+    function openResume(){
+        window.open(Resume);
+    }
     return (
         <div className="btn-group" id="nav-box" role="group">
-            <button type="button" className="btn btn-primary" style={styles[0]} onClick={()=>handleClick('/')}>Home</button>
-            <button type="button" className="btn btn-primary" style={styles[1]} onClick={()=>handleClick('/projects')}>Projects</button>
-            <button type="button" className="btn btn-primary" style={styles[2]} onClick={()=>handleClick('/experience')}>Experience</button>
-            <button type="button" className="btn btn-primary" style={styles[3]} onClick={()=>handleClick('/experience')}>Resume</button>
+            <button type="button" className="btn btn-primary" style={styles[0]} onClick={()=>handleClick('/')}>{dimensions.width<820 ? (<i className="fa-solid fa-house fa-lg" style={{color: "#f7f7f7"}}></i>):"Home"}</button>
+            <button type="button" className="btn btn-primary" style={styles[1]} onClick={()=>handleClick('/projects')}>{dimensions.width<820 ? (<i className="fa-solid fa-code fa-lg" style={{color: "#ffffff;"}}></i>):"Projects"}</button>
+            <button type="button" className="btn btn-primary" style={styles[2]} onClick={()=>handleClick('/cookie')}>{dimensions.width<820 ? (<i className="fa-solid fa-cookie fa-lg" style={{color: "#f7f7f7"}}></i>):"Cookie"}</button>
+            <button type="button" className="btn btn-primary" style={styles[3]} onClick={()=>openResume()}>{dimensions.width<820 ? (<i className="fa-solid fa-briefcase fa-lg" style={{color: "#f7f7f7"}}></i>):"Resume"}</button>
         </div>
     )
 }

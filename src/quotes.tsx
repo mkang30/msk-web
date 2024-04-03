@@ -1,0 +1,22 @@
+export const quotes = [
+    "To enjoy bodily warmth, some small part of you must be cold, for there is no quality in this world that is not what it is merely by contrast. Nothing exists in itself.",
+    "And some certain significance lurks in all things, else all things are little worth, and the round world itself but an empty cipher, except to sell by the cartload, as they do the hills about Boston, to fill up some morass in the Milky Way.",
+    "His whole body shakes with the strain as he tries to lift something he knows he can’t lift, something everybody knows he can’t lift. But, for just a second, when we hear the cement grind at our feet, we think, by golly, he might do it",
+    "You never really understand a person until you consider things from his point of view...until you climb into his skin and walk around in it.",
+    "Mockingbirds don’t do one thing but make music for us to enjoy . . . but sing their hearts out for us. That’s why it’s a sin to kill a mockingbird.",
+    "Before I can live with other folks I’ve got to live with myself.",
+    "You can’t stay in your corner of the Forest waiting for others to come to you. You have to go to them sometimes.",
+    "Memory can change the shape of a room.",
+    "My illness is part of me. They shouldn't behave differently because I'm ill. Or can they only love me when I'm well?",
+    "If a man has lost a leg or an eye, he knows he has lost a leg or an eye; but if he has lost a self—himself—he cannot know it, because he is no longer there to know it.",
+    "Happiness always looks small while you hold it in your hands, but let it go, and you learn at once how big and precious it is.",
+    "Lies are the religion of slaves and masters. Truth is the god of the free man.",
+    "Truth is neither ojectivity nor the balanced view; truth is a selfless subjectivity.",
+    "Small jerks began to appear in my legs, my walk became unsteady precisely because I wanted it to be smooth.",
+    "It is better to burn than to disappear.",
+    "One always has exaggerated ideas about what one doesn't know.",
+    "Look with your understanding, find out what you already know, and you’ll see the way to fly.",
+    "Don’t believe what your eyes are telling you. All they show is limitation.",
+    "Yesterday's rose endures in its name, we hold empty names.",
+    "True learning must not be content with ideas, which are, in fact, signs, but must discover things in their individual truth."
+]

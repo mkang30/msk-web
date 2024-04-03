@@ -4,7 +4,7 @@ import PageTitle from './PageTitle'
 import NavBar from './NavBar'
 import Home from '../pages/Home'
 import Projects from '../pages/Projects'
-import Experience from '../pages/Experience'
+import Cookie from '../pages/Cookie'
 
 export default function Page(props: PageProps){
     return(
@@ -16,8 +16,8 @@ export default function Page(props: PageProps){
                             return <Home/>
                         case PageContent.PROJECTS:
                             return  <Projects/>
-                        case PageContent.EXPERIENCE:
-                            return <Experience/>
+                        case PageContent.COOKIE:
+                            return <Cookie/>
                         default:
                             return
                     }

@@ -22,12 +22,9 @@
 .bio-box {
     grid-row: 1/2;
     grid-column: 2/3;
-    padding: 11.5% 10% 0% 5%
-}
-
-.bio-box p {
+    padding: 11.5% 10% 0% 5%;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.2vw;
+    font-size: 19px;
     font-weight: 400;
     color: white;
 }
@@ -42,4 +39,27 @@
 
 .social-icons {
     margin: 0% 2%
+}
+
+@media screen and (max-width: 600px) {
+    .home-box {
+        display: grid; 
+        grid-template-columns: 100%;
+        grid-template-rows: 40% 5% 55%;
+    }
+    .profile-pic-box {
+        padding: 3% 0% 0% 0%;
+    }
+    .social-box {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    .bio-box {
+        grid-row: 3/4;
+        grid-column: 1/2;
+        padding: 2% 8%;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    
 }
