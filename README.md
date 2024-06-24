@@ -1,6 +1,6 @@
 # minseongkang.com
 
-This repository houses the source of my [personal website](minseongkang.com), built with **React, Typescript, Node.js**.
+This repository houses the source of my [personal website](https://minseongkang.com), built with **React, Typescript, Node.js**.
 I use **npm** as the package manager.
 
 ## Development Guide
